@@ -4,6 +4,7 @@
   import PropLabel from "./PropLabel.svelte";
   import StoryPreview from "./StoryPreview.svelte";
   import Button from "./Button.svelte";
+  import Hints from "./Hints.svelte";
   let name = "";
   let showHelp = false;
   let showStoryNeeded = false;
@@ -53,8 +54,8 @@
 <div>
   <label for="name">Name your story</label>
   <input id="name" type="text" bind:value={name} />
-  {#if showHelp}
-    <p class="hint">
+  <Hints show={showHelp}>
+    <p>
       You need to give your story a name (how about <a
         href="#/"
         on:click|preventDefault={() => {
@@ -63,7 +64,7 @@
         }}>Primary</a
       >?)
     </p>
-  {/if}
+  </Hints>
 
   <h2>Arguments</h2>
   {#each propList as prop, i}
@@ -75,9 +76,9 @@
   <Button on:click={saveStory} label="Save" />
   <Button on:click={submit} variant="linkbutton" label="Next" />
 </div>
-{#if showStoryNeeded}
+<Hints show={showStoryNeeded}>
   <p>You need at least one story</p>
-{/if}
+</Hints>
 <section class="storylist">
   {#each $state.stories as story}
     <StoryPreview {story} />

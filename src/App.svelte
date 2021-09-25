@@ -4,6 +4,7 @@
   import SetStory from "./comps/SetStory.svelte";
   import Download from "./comps/Download.svelte";
   import { state, step } from "./stores/state.js";
+  //skift til https://svelte.dev/tutorial/svelte-component
 </script>
 
 <main>

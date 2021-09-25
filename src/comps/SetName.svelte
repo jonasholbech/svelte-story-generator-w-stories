@@ -2,6 +2,8 @@
   import { state, step } from "../stores/state.js";
   import { next, sanitizeComponentName } from "../utils/helpers";
   import Button from "./Button.svelte";
+  import Hints from "./Hints.svelte";
+
   let showHelp = false;
   function input(e) {
     e.target.value = sanitizeComponentName(e.target.value);
@@ -30,10 +32,12 @@
     type="text"
     on:input={input}
   />
-  {#if showHelp}
-    <p class="hint">You component must start with a CAPITAL letter</p>
-    <p class="hint">Followed by one or more lower case letters</p>
-  {/if}
+
+  <Hints show={showHelp}>
+    <p>You component must start with a CAPITAL letter</p>
+    <p>Followed by one or more lower case letters</p>
+  </Hints>
+
   <Button variant="linkbutton" label="Next" />
 </form>
 

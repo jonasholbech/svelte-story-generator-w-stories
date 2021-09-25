@@ -1,3 +1,7 @@
+:root {
+  --blue: rgb(0, 100, 200);
+  --blue-visited: rgb(0, 80, 160);
+}
 * {
   box-sizing: border-box;
 }
@@ -15,9 +19,8 @@ body {
   background: transparent;
 }
 a,
-label,
-.linkbutton {
-  color: rgb(0, 100, 200);
+label {
+  color: var(--blue);
   text-decoration: none;
 }
 
@@ -26,7 +29,7 @@ a:hover {
 }
 
 a:visited {
-  color: rgb(0, 80, 160);
+  color: var(--blue-visited);
 }
 
 label {
@@ -42,23 +45,12 @@ textarea {
   -webkit-padding: 0.4em 0;
   padding: 0.4em;
   margin: 0 0 0.5em 0;
-
   border: 1px solid #ccc;
   border-radius: 2px;
 }
 
 input:disabled {
   color: #ccc;
-}
-
-button {
-  color: #333;
-  background-color: #f4f4f4;
-  outline: none;
-}
-
-button:disabled {
-  color: #999;
 }
 
 button:not(:disabled):active {
@@ -69,10 +61,6 @@ button:focus {
   border-color: #666;
 }
 
-.hint {
-  font-size: 0.8rem;
-  font-weight: bold;
-}
 input,
 button,
 textarea {

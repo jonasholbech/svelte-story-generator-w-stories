@@ -32,3 +32,10 @@
     label: "Button",
   }}
 />
+<Story
+  name="Disabled"
+  args={{
+    label: "Button",
+    disabled: true,
+  }}
+/>
