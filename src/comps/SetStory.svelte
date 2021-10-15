@@ -80,6 +80,7 @@
   <p>You need at least one story</p>
 </Hints>
 <section class="storylist">
+  <h3>Stories</h3>
   {#each $state.stories as story}
     <StoryPreview {story} />
   {/each}
@@ -89,9 +90,12 @@
   h2 {
     margin-top: 2rem;
   }
+  h3 {
+    grid-column: 1/-1;
+  }
   .storylist {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 300px));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 1rem;
     margin: auto;
   }

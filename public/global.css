@@ -89,6 +89,3 @@ main {
   margin-top: 2rem;
   box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.4);
 }
-.storylist > * {
-  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.4);
-}

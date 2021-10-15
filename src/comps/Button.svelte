@@ -34,4 +34,13 @@
     background-color: rgba(51, 51, 51, 0.3);
     cursor: not-allowed;
   }
+  @media (prefers-color-scheme: light) {
+    .button {
+      background-color: hotpink;
+      color: white;
+    }
+    .button:hover {
+      background-color: rgba(0, 100, 200, 0.8);
+    }
+  }
 </style>
